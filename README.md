@@ -1,2 +1,2 @@
-A simple shell that currently supports `cd` and `exit` commands only.
-use `make` command instead of `make yeetsh` to build.
+A simple shell that currently supports `cd` and `exit` commands only.  
+Use `make` command to build.
