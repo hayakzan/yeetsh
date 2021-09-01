@@ -152,7 +152,7 @@ void exec_external_cmd(struct Command** cmd) {
   
   if (cmd_pr < 0) {
     //fork failed
-    //    fprintf(stderr, "fork failed\n");
+    fprintf(stderr, "fork failed\n");
     exit(1);
       
   } else if (cmd_pr == 0) {
