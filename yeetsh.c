@@ -145,7 +145,7 @@ int try_exec_builtin(struct Command** cmd) {
   else if (strcmp(curr_cmd[0].args[0], helpMsg) == 0) {
     int i;
     printf("yeetsh: a shell with a horrible name\n");
-    printf("type ./donut for a free doughnut (code by Andy Sloane, see the details in donut.c)");
+    printf("type ./donut for a free doughnut (code by Andy Sloane, see the details in donut.c)\n");
     printf("the following builtin commands are available:\n");
     for (i=0; i < yeetsh_num_builtins(); i++) {
       printf("   %s\n", builtin_str[i]);
