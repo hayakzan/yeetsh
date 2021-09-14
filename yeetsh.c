@@ -107,7 +107,7 @@ void eval(char** cmd_tokens) {
 
 /* Execute built-in commands */
 
-char* builtin_str[] = { "exit", "cd", "path?", "help!" };
+char* builtin_str[] = { "exit", "cd", "path?", "help" };
 
 int yeetsh_num_builtins() {
   return sizeof(builtin_str) / sizeof(char *);
@@ -119,8 +119,8 @@ int try_exec_builtin(struct Command** cmd) {
   char* exitMsg = "exit";
   char* cdMsg = "cd";
   char* pathMsg = "path?";
-  char* helpMsg = "help!";
-  char* donutMsg = "./donut";
+  char* helpMsg = "help";
+  char* donutMsg = "donut";
   char s[100];
   int ret;
   
@@ -145,7 +145,7 @@ int try_exec_builtin(struct Command** cmd) {
   else if (strcmp(curr_cmd[0].args[0], helpMsg) == 0) {
     int i;
     printf("yeetsh: a shell with a horrible name\n");
-    printf("type ./donut for a free doughnut (code by Andy Sloane, see the details in donut.c)\n");
+    printf("type 'donut' for a free doughnut (code by Andy Sloane, see the details in donut.c)\n");
     printf("the following builtin commands are available:\n");
     for (i=0; i < yeetsh_num_builtins(); i++) {
       printf("   %s\n", builtin_str[i]);
